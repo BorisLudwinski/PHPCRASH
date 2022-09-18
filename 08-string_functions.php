@@ -53,7 +53,7 @@ if (str_starts_with($string, 'Hello')) {
 
 // Ends with
 if (str_ends_with($string, 'ld')) {
-  echo 'YES';
+  echo 'YES' . "<br/>";
 }
 
 // HTML Entities

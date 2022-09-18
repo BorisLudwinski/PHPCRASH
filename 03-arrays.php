@@ -1,4 +1,6 @@
 <?php
+
+/*
 // Simple Array
 
 $numbers = [1,2,3,3,5,];
@@ -60,5 +62,42 @@ $people = [
 
 
 var_dump(json_encode($people));
+
+
+*/
+$first = array(10, 'Apple', 20, -18, 'Monkey');
+$second =[10, 'Apple', 20, -18, 'Monkey'];
+
+$first[0];
+$second[1];
+
+$third = [10, 5=>'Apple', 2 => 20, -18, 'Monkey'];
+
+// 0, 5, 2, 6, 7
+
+$colors = [
+    'sky' => 'blue',
+    'grass' => 'green',
+    'orange' => 'orange',
+];
+
+$keys = ['sky', 'grass', 'orange'];
+$values = ['blue', 'green', 'orange'];
+
+$combined = array_combine($keys, $values); // similar to the $colors array
+
+array_keys($colors); // new [];
+
+array_values($colors); // new [];
+
+print_r(array_flip($colors)); // flip the arrays
+
+$values = ['apples', 'bannas' , '100', '200', 100];
+
+if (in_array(100, $values)) {
+    echo 'the array has 100';
+}
+
+
 
 ?>
