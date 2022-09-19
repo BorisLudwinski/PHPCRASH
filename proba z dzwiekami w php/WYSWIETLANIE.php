@@ -1,17 +1,34 @@
 <?php
-$matrix = [];
 
-$dzwieki[] = ["c", "c#", "d", "d#", "e", "f", "f#", "g", "g#", "a", "a#", "b"];
+$dzwieki = [
+    1 => 'c', 
+    1 => 'c#', 
+    2 => 'd', 
+    3 => 'd#', 
+    4 => 'e',
+    5 => 'f', 
+    6 => 'f#', 
+    7 => 'g', 
+    8 => 'g#', 
+    9 => 'a',
+    10 => 'a#', 
+    11 => 'b',
+];
 
 
 
-for ($x=0; $x < count($dzwieki); $x++) {
-    $matrix[$x] = array_push($dzwieki[$x], array_shift($dzwieki[$x]));
 
-
+function moveElement(&$dzwieki, $a, $b) {
+    $out = array_splice($dzwieki, $a, 1);
+    array_splice($dzwieki, $b, 0, $out);
 }
-//  print_r($dzwieki);
- print_r($matrix);
+
+
+foreach($dzwieki as $key => $value) {
+    echo "$key - $value";
+    moveElement($dzwieki, 0, 11);
+    print_r($dzwieki);
+}
 
 
 
