@@ -12,9 +12,11 @@ session_start();
 if(isset($_POST['submit'])) {
 
   $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
-  $password = $_POST['password'];
 
-if($username == 'Boris' && $password == 'password') {
+  $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
+  
+
+if($username == 'boris' && $password == 'password') {
   $_SESSION['username'] = $username;
   header('Location: /PHPCRASH/extras/dashboard.php');
 
@@ -25,7 +27,6 @@ if($username == 'Boris' && $password == 'password') {
 
 ?>
 
-</*Tworzenie forma*/>
 
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST"> 
 <div>

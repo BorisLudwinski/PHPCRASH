@@ -1,4 +1,5 @@
 <?php
+$matrix[] = [];
 
 $dzwieki = [
     1 => 'c', 
@@ -26,10 +27,10 @@ function moveElement(&$dzwieki, $a, $b) {
 
 foreach($dzwieki as $key => $value) {
     echo "$key - $value";
-    moveElement($dzwieki, 0, 11);
+    $matrix[$key] = moveElement($dzwieki, 0, 11);
     print_r($dzwieki);
 }
 
 
-
+echo $matrix;
 ?>

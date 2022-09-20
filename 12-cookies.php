@@ -10,7 +10,7 @@
 // Since cookies are stored on the client, you shouldn't store sensitive data in them. Sessions are a better choice for storing sensitive data.
 
 // Set a cookie (for 30 days)
-setcookie('name', 'Boris', time() + 86400 * 30);
+setcookie('name', 'boris', time() + 86400 * 30);
 
 if(isset($_COOKIE['name'])) {
     echo $_COOKIE['name'];
